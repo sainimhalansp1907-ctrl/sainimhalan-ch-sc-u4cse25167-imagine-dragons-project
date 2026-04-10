@@ -1,0 +1,249 @@
+.header{
+display:flex;
+gap:40px;
+padding:20px;
+background:#111;
+display: flex; 
+justify-content: space-between; 
+}
+
+.header a{
+color:white;
+text-decoration:none;
+font-size:28px;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+font-style:oblique; 
+}
+
+body{
+    background-color: black;
+}
+
+.results-container{
+    display: flex; 
+    justify-content: center; 
+    margin-top: 30px;
+}
+
+.results-container{
+    display: flex; 
+    justify-content: center; 
+    margin-top: 30px;
+}
+.results-container{
+    margin-top: 130px; 
+}
+
+.bar-search{
+    border-radius: 5px; 
+    border: none; 
+    font-weight: bold; 
+    font-family:Georgia, 'Times New Roman', Times, serif;  
+    font-size: 30px; 
+    color: black; 
+    height: 35px; 
+    width: 800px; 
+    font-size: 15px; 
+    padding: 10px;
+} 
+
+.Hits-imagine {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px 20px; 
+    margin-top: 100px;
+    padding: 0 50px;
+    justify-items: center; 
+}
+
+.Imagine-radioactive, .Imagine-shots, .Imagine-Whatever-it-takes,
+.Imagine-Bad-liar, .Imagine-Follow-You, .Imagine-Sharks,
+.Imagine-Demons, .Imagine-I-bet-my-life, .Imagine-Thunder,
+.Imagine-Enemy, .Imagine-Cutthroat, .Imagine-Time,
+.Imagine-on-top-of-the-world, .Imagine-Believer, .Imagine-Natural,
+.Imagine-Wrecked, .Imagine-Bones {
+    width: 100%;
+    max-width: 530px; 
+    height: auto;
+    border-radius: 20px;
+    display: block;
+    margin-left: 0 !important; /* Forces all those old margins to 0 */
+}
+
+/* Global style for all song titles */
+[class*="Imagine-"][class$="-text"] {
+    color: rgb(15, 15, 15);
+    cursor: pointer;
+    display: block; /* Changed from inline to block for better spacing */
+    font-family: Arial, sans-serif; 
+    font-size: 25px; 
+    font-weight: 400; 
+    line-height: 26px; 
+    margin-top: 15px;
+    margin-left: 0 !important; /* Removes the 70px/150px drift */
+    text-wrap: wrap;
+    color: white; 
+}
+
+.para-container, .para-container1, .para-container2, .para-container3, 
+.para-container4, .para-container5, .para-container6, .para-container7, 
+.para-container8, .para-container9, .para-container10, .para-container11 {
+    display: grid;
+    grid-template-columns: 60px 1fr; 
+    margin-top: 10px;
+    margin-left: 0 !important; /* Removes the 70px/150px drift */
+}
+
+.dan-reynolds-img,
+.wayne-sermon-img,
+.ben-mckee-img,
+.daniel-platzman-img,
+.andrew-tolman-img,
+.brittany-tolman-img,
+.andrew-beck-img,
+.aurora-florence-img,
+.theresa-flaminio-img,
+.dave-lemke-img{
+    height: 200px;
+    width: 200px; 
+    border-radius: 100px; 
+    cursor: pointer;
+}
+
+.ben-mckee,
+.dan-reynolds,
+.wayne-sermon,
+.daniel-platzman,
+.andrew-tolman,
+.brittany-tolman,
+.andrew-beck,
+.aurora-florence,
+.theresa-flaminio,
+.dave-lemke{
+    margin-left: 270px;  
+}
+
+.ben-mckee-name,
+.dan-reynolds-name,
+.wayne-sermon-name,
+.daniel-platzman-name,
+.andrew-tolman-name,
+.brittany-tolman-name,
+.andrew-beck-name,
+.aurora-florence-name,
+.theresa-flaminio-name,
+.dave-lemke-name{
+    font-size: 27px; 
+    font-family: Sans-serif; 
+    margin-left: 15px; 
+    cursor: pointer; 
+    margin-top: -2px; 
+}
+.ben-mckee-name{
+    margin-left: 30px; 
+}
+
+.Dragons-text {
+    font-size: 20px; 
+    font-family: Arial, sans-serif; 
+    margin-top: 12px; 
+    color: white; 
+}
+
+.video-container,
+.video-container-one,
+.video-container-two{
+  position: relative; /* This is the anchor for the icon */
+  width: 100%;
+  max-width: 400px; /* Adjust based on your layout */
+  cursor: pointer;
+}
+
+.thumbnail {
+  width: 1px;
+  display: block;
+  border-radius: 12px; /* Optional: adds the rounded look from your image */
+}
+
+.play-button{
+  position: absolute; /* Moves the icon relative to the container */       /* Move down 50% */
+  left: 50%;          /* Move right 50% */
+  transform: translate(-50%, -50%); /* Centers the icon perfectly */
+  
+  background: rgba(0, 0, 0, 0.6); /* Optional: semi-transparent circle background */
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.play-button{
+    margin-top: -100px; 
+    margin-left: -30px; 
+}
+
+.video-container:hover .play-button .video-container-one .video-container-two{
+  transform: translate(-50%, -50%) scale(1.1);
+  background: rgba(0, 0, 0, 0.8);
+} 
+
+.video-container-one{
+    margin-left: 100px;
+}
+
+.video-container-two{
+    margin-left: 200px;
+}
+
+.Imagine-icon {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%; /* standard circle icon */
+}
+
+.hamburger-container {
+  position: absolute; /* Use 'absolute' to sit below the header in the flow */
+  top: 100px;          /* Increase this if it's still overlapping your header text */
+  left: 20px;         /* Moves it to the left side */
+  z-index: 1000;      /* Keeps it above the images */
+}
+
+/* 2. The Icon */
+.hamburger {
+  font-size: 35px;
+  color: white; 
+  cursor: pointer;
+  user-select: none;
+}
+
+/* 3. The Dropdown - Adjusted to open from the left */
+.hamburger-dropdown {
+  display: none; 
+  position: absolute;
+  left: 0;            /* Align the menu to the left of the icon */
+  top: 45px;
+  background-color: #1a1a1a; 
+  min-width: 160px;
+  border: 1px solid #444; 
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+  border-radius: 5px;
+}
+
+/* 4. Dropdown Links */
+.hamburger-dropdown a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.hamburger-dropdown a:hover {
+  background-color: #333;
+}
+
+/* 5. Toggle class remains the same */
+.hamburger-dropdown.active {
+  display: block;
+}

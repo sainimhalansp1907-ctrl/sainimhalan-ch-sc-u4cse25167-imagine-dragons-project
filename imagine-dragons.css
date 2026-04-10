@@ -1,0 +1,228 @@
+.header{
+display:flex;
+gap:40px;
+padding:20px;
+background-color:black; 
+display: flex; 
+justify-content: space-between; 
+}
+
+.header a{
+color:white;
+text-decoration:none;
+font-size:28px;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+font-style:oblique; 
+}
+
+body{
+    background-color: black; 
+}
+
+.Home{
+    color: white; 
+    font-size:28px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    font-style:oblique; 
+}
+.card {
+    min-width: 300px;
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+    filter: brightness(50%);
+    margin-top: 100px; 
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 15px;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none; /* hide scrollbar */
+}
+
+.scroll-container {
+    position: relative;
+}
+
+.imagine-dragons-symbol{
+    width: 230px; 
+    height: 250px; 
+    display: flex; 
+    margin-left: 750px; 
+    margin-top: 50px;
+    transition: 0.5s; 
+    animation: spin3d 4s linear infinite;
+}
+
+@keyframes spin3d {
+  from {
+    transform: rotate3d(1, 1, 1, 0deg); /* Start rotation at 0 degrees */
+  }
+  to {
+    transform: rotate3d(1, 1, 1, 360deg); /* End rotation at 360 degrees */
+  }
+} 
+
+.welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+    pointer-events: none;
+    margin-top: -40px;
+}
+
+#typewriter {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #ff0000,
+        0 0 20px #ff0000,
+        0 0 40px #ff0000;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 
+            0 0 5px #fff,
+            0 0 10px #ff0000,
+            0 0 20px #ff0000;
+    }
+    to {
+        text-shadow: 
+            0 0 20px #fff,
+            0 0 30px #ff0000,
+            0 0 40px #ff0000;
+    }
+}
+
+
+
+#myModal{
+    padding:20px;
+    border-radius:12px;
+    max-width:400px;
+    width:90%;
+    position:relative;
+}
+
+#close-modal{
+    color: black; 
+    position:absolute;
+    top:10px;
+    right:10px;
+    background:none;
+    border:none;
+    font-size:24px;
+    cursor:pointer;
+}
+
+#close-modal{
+    cursor: not-allowed; 
+    opacity: 0.5; 
+    transition: opcaity 0.3 ease; 
+}
+
+#close-modal.active{
+    opacity: 1; 
+    cursor: pointer;
+}
+
+#okBtn{
+    cursor: not-allowed; 
+    opacity: 0.5; 
+    transition: opacity 0.3 ease; 
+}
+
+#okBtn.active{
+    opacity: 1; 
+    cursor: pointer; 
+}
+
+#open-btn{
+    background-color: rgb(166, 50, 166); 
+    color: white; 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    font-weight: 200; 
+    border-radius: 5px; 
+    height: 40px; 
+    width: 200px; 
+    font-size: 15px; 
+    margin-top: 40px; 
+    cursor:pointer;
+}
+
+#open-btn:hover{
+    transition: opacity 0.1 ease; 
+    background-color: #4545d8cf; 
+}
+
+/* 1. The Container */
+/* 1. The Container - Moved to Left and Down */
+.hamburger-container {
+  position: absolute; /* Use 'absolute' to sit below the header in the flow */
+  top: 100px;          /* Increase this if it's still overlapping your header text */
+  left: 20px;         /* Moves it to the left side */
+  z-index: 1000;      /* Keeps it above the images */
+}
+
+/* 2. The Icon */
+.hamburger {
+  font-size: 35px;
+  color: white; 
+  cursor: pointer;
+  user-select: none;
+}
+
+/* 3. The Dropdown - Adjusted to open from the left */
+.hamburger-dropdown {
+  display: none; 
+  position: absolute;
+  left: 0;            /* Align the menu to the left of the icon */
+  top: 45px;
+  background-color: #1a1a1a; 
+  min-width: 160px;
+  border: 1px solid #444; 
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+  border-radius: 5px;
+}
+
+/* 4. Dropdown Links */
+.hamburger-dropdown a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.hamburger-dropdown a:hover {
+  background-color: #333;
+}
+
+/* 5. Toggle class remains the same */
+.hamburger-dropdown.active {
+  display: block;
+}

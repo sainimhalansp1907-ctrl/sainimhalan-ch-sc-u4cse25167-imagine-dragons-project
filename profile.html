@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<body style="background:#000; color:#fff; display:grid; place-items:center; height:100vh; font-family:sans-serif;">
+
+    <form id="f" style="width:280px; text-align:center; transition: 0.3s;">
+        <h2 style="letter-spacing:2px;">BELIEVER LOGIN</h2>
+        
+        <input id="u" type="text" placeholder="Username" minlength="3" required 
+            style="width:100%; padding:10px; margin:8px 0; border:1px solid #444; background:#111; color:#fff;">
+        
+        <div style="position:relative;">
+        <input id="p" type="password" placeholder="Password" minlength="6" required 
+                style="width:100%; padding:10px; margin:8px 0; border:1px solid #444; background:#111; color:#fff;">
+        <span onclick="p.type=p.type=='password'?'text':'password'" 
+                style="position:absolute; right:10px; top:18px; cursor:pointer; font-size:12px; color:#888;">👁️</span>
+        </div>
+
+        <button type="submit" style="width:100%; padding:12px; background:#ff0033; color:#fff; border:none; font-weight:bold; cursor:pointer; margin-top:10px;">
+        LOG IN
+        </button>
+    </form>
+
+    <h1 id="m" style="display:none; color:#ff0033; text-shadow: 0 0 10px #ff0033;">WELCOME TO THE EVOLUTION 🐉</h1>
+
+    <script>
+        const f = document.getElementById('f'), m = document.getElementById('m');
+
+        f.onsubmit = (e) => {
+        e.preventDefault();
+        f.style.opacity = '0'; // Fade out
+        setTimeout(() => {
+            f.style.display = 'none';
+            m.style.display = 'block';
+        }, 300);
+        };
+
+        // Simple "Shake" effect if browser validation fails
+        f.querySelector('button').onclick = () => {
+        if (!f.checkValidity()) {
+            f.style.transform = 'translateX(10px)';
+            setTimeout(() => f.style.transform = 'translateX(-10px)', 50);
+            setTimeout(() => f.style.transform = 'translateX(0)', 100);
+        }
+        };
+    </script>
+</body>

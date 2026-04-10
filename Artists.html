@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Artists</title>
+    <link rel="stylesheet" href="Artists.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/white-imagine-dragons.png">
+    <link rel="icon" href="images/white-imagine-dragons.png">
+</head>
+<body> 
+    <div class="header">
+        <div>
+            <a class="Home" href="index.html">Home</a>               
+        </div> 
+        <div>
+            <a class="Albums" href="Albums.html">Albums</a> 
+        </div> 
+        <div>
+            <a class="Hits" href="Hits.html">Hits</a>
+        </div> 
+        <div>
+            <a class="Artists" href="Artists.html">Artists</a>
+        </div> 
+    </div>
+    <div class="hamburger-container">
+        <div class="hamburger">☰</div>
+
+        <div class="hamburger-dropdown">
+            <a href="profile.html">Profile</a> 
+        </div>
+    </div>
+    <h1 class="art-header" style="text-align: center">Artists</h1>
+    <input id="bar3" type="text" placeholder="Search Artists...">
+    <div class="band-artists">
+        <div class="dan-reynolds"> 
+            <a class="link-dan" href="dan.html"> 
+                <img class="dan-reynolds-img" src="images/dan-reynolds.avif">
+                <p class="artist-name dan-reynolds-name">Dan Reynolds</p>
+            </a>
+            
+        </div>
+        <div class="wayne-sermon">
+            <a class="link-wayne" href="wayne-sermon.html">
+                <img class="wayne-sermon-img" src="images/wayne-sermon3.jpg"> 
+                <p class=" artist-name wayne-sermon-name">Wayne sermon</p>
+            </a>
+            
+        </div>
+        <div class="ben-mckee"> 
+            <a class="link-ben" href="ben.html">
+                <img class="ben-mckee-img" src="images/ben-mckee3.jpg">
+                <p class=" artist-name ben-mckee-name">Ben Mckee</p>
+            </a>
+            
+        </div>
+        <div class="andrew-tolman">
+            <a class="link-andrew" href="andrew-tolman.html">
+                <img class="andrew-tolman-img" src="images/andrew-tolman.webp">
+                <p class="artist-name andrew-tolman-name">Andrew Tolman</p>
+            </a>
+        </div>
+        <div class="daniel-platzman"> 
+            <a class="link-daniel" href="daniel.html">
+                <img class="daniel-platzman-img" src="images/daniel-platzman2.webp">
+                <p class="artist-name daniel-platzman-name">Daniel Platzman</p>
+            </a>
+            
+        </div>
+        <div class="brittany-tolman"> 
+            <a class="link-brittany" href="brittany.html">
+                <img class="brittany-tolman-img" src="images/brittany-tolman.jpg">
+                <p class="artist-name brittany-tolman-name">Brittany Tolman</p>
+            </a>
+            
+        </div>
+        <div class="andrew-beck"> 
+            <a class="link-beck" href="andrew-beck.html">
+                <img class="andrew-beck-img" src="images/andrew-beck.jpg">
+                <p class="artist-name andrew-beck-name">Andrew Beck</p>
+            </a>
+            
+        </div>
+        <div class="aurora-florence"> 
+            <a class="link-florence" href="aurora.html">
+                <img class="aurora-florence-img" src="images/aurora-florence2.jpg">
+                <p class="artist-name aurora-florence-name">Aurora Florence</p>
+            </a>
+        </div> 
+        <div class="theresa-flaminio"> 
+            <a class="link-theresa" href="theresa-flaminio.html">
+                <img class="theresa-flaminio-img" src="images/theresa-flaminio2.webp">
+                <p class="artist-name theresa-flaminio-name">Theresa Flaminio</p>
+            </a>
+        </div> 
+        <div class="dave-lemke"> 
+            <a class="link-dave" href="dave-lemke.html">
+                <img class="dave-lemke-img" src="images/dave-lemke.webp">
+                <p class="artist-name dave-lemke-name">Dave Lemke</p>
+            </a>
+        </div>
+        </div> 
+    </div>
+    <script>
+        const hamburgerBtn = document.querySelector('.hamburger');
+        const dropdownMenu = document.querySelector('.hamburger-dropdown');
+
+        // Toggle menu when clicking the icon
+        hamburgerBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevents the window click from firing immediately
+            dropdownMenu.classList.toggle('active');
+        });
+
+        // Close menu if user clicks anywhere else on the screen
+        window.addEventListener('click', () => {
+            if (dropdownMenu.classList.contains('active')) {
+                dropdownMenu.classList.remove('active');
+            }
+        });
+
+        const searchInput = document.getElementById("bar3");
+        // We select the container divs so we can hide the whole card (image + name)
+        const artistCards = document.querySelectorAll(".band-artists > div");
+
+        searchInput.addEventListener("input", (e) => {
+            const search = e.target.value.toLowerCase();
+
+            artistCards.forEach(card => {
+                // Find the paragraph text inside this specific card
+                const nameElement = card.querySelector(".artist-name");
+                const artistName = nameElement.textContent.toLowerCase();
+
+                // Check if the search string exists in the name
+                if (artistName.includes(search)) {
+                    card.style.display = "block"; // Show the card
+                } else {
+                    card.style.display = "none";  // Hide the card
+                }
+            });
+        });
+
+    </script>
+</body>
+</html> 
